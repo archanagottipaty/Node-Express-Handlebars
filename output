@@ -1,0 +1,100 @@
+2021-01-25T00:21:06.437214+00:00 app[web.1]: Server listening on: http://localhost:57261
+2021-01-25T00:21:06.441833+00:00 app[web.1]: error connecting: Error: connect ECONNREFUSED 127.0.0.1:3306
+2021-01-25T00:21:06.441834+00:00 app[web.1]: at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16)
+2021-01-25T00:21:06.441835+00:00 app[web.1]: --------------------
+2021-01-25T00:21:06.441836+00:00 app[web.1]: at Protocol._enqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+2021-01-25T00:21:06.441836+00:00 app[web.1]: at Protocol.handshake (/app/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+2021-01-25T00:21:06.441837+00:00 app[web.1]: at Connection.connect (/app/node_modules/mysql/lib/Connection.js:116:18)
+2021-01-25T00:21:06.441837+00:00 app[web.1]: at Object.<anonymous> (/app/config/connection.js:14:12)
+2021-01-25T00:21:06.441837+00:00 app[web.1]: at Module._compile (internal/modules/cjs/loader.js:999:30)
+2021-01-25T00:21:06.441838+00:00 app[web.1]: at Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)
+2021-01-25T00:21:06.441838+00:00 app[web.1]: at Module.load (internal/modules/cjs/loader.js:863:32)
+2021-01-25T00:21:06.441839+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:708:14)
+2021-01-25T00:21:06.441839+00:00 app[web.1]: at Module.require (internal/modules/cjs/loader.js:887:19)
+2021-01-25T00:21:06.441839+00:00 app[web.1]: at require (internal/modules/cjs/helpers.js:74:18)
+2021-01-25T00:21:06.894062+00:00 heroku[web.1]: State changed from starting to up
+2021-01-25T00:21:10.483818+00:00 app[web.1]: /app/config/orm.js:44
+2021-01-25T00:21:10.483835+00:00 app[web.1]: throw err;
+2021-01-25T00:21:10.483835+00:00 app[web.1]: ^
+2021-01-25T00:21:10.483836+00:00 app[web.1]: 
+2021-01-25T00:21:10.483837+00:00 app[web.1]: Error: Cannot enqueue Query after fatal error.
+2021-01-25T00:21:10.483837+00:00 app[web.1]: at Protocol._validateEnqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:212:16)
+2021-01-25T00:21:10.483838+00:00 app[web.1]: at Protocol._enqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:138:13)
+2021-01-25T00:21:10.483838+00:00 app[web.1]: at Connection.query (/app/node_modules/mysql/lib/Connection.js:198:25)
+2021-01-25T00:21:10.483839+00:00 app[web.1]: at Object.all (/app/config/orm.js:42:16)
+2021-01-25T00:21:10.483839+00:00 app[web.1]: at Object.all (/app/models/burger.js:6:9)
+2021-01-25T00:21:10.483840+00:00 app[web.1]: at /app/controllers/burgersController.js:10:10
+2021-01-25T00:21:10.483840+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2021-01-25T00:21:10.483841+00:00 app[web.1]: at next (/app/node_modules/express/lib/router/route.js:137:13)
+2021-01-25T00:21:10.483841+00:00 app[web.1]: at Route.dispatch (/app/node_modules/express/lib/router/route.js:112:3)
+2021-01-25T00:21:10.483842+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5) {
+2021-01-25T00:21:10.483842+00:00 app[web.1]: code: 'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR',
+2021-01-25T00:21:10.483842+00:00 app[web.1]: fatal: false
+2021-01-25T00:21:10.483843+00:00 app[web.1]: }
+2021-01-25T00:21:10.490067+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=GET path="/" host=burger-2021.herokuapp.com request_id=ad0b7adc-6a11-4887-b329-5780bcf43087 fwd="73.202.240.39" dyno=web.1 connect=0ms service=17ms status=503 bytes=0 protocol=https
+2021-01-25T00:21:10.501906+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2021-01-25T00:21:10.502275+00:00 app[web.1]: npm ERR! errno 1
+2021-01-25T00:21:10.509805+00:00 app[web.1]: npm ERR! mvc_design@1.0.0 start: `node server.js`
+2021-01-25T00:21:10.510002+00:00 app[web.1]: npm ERR! Exit status 1
+2021-01-25T00:21:10.510654+00:00 app[web.1]: npm ERR!
+2021-01-25T00:21:10.510842+00:00 app[web.1]: npm ERR! Failed at the mvc_design@1.0.0 start script.
+2021-01-25T00:21:10.510999+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2021-01-25T00:21:10.524608+00:00 app[web.1]: 
+2021-01-25T00:21:10.529482+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2021-01-25T00:21:10.529635+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2021-01-25T00_21_10_512Z-debug.log
+2021-01-25T00:21:10.604640+00:00 heroku[web.1]: Process exited with status 1
+2021-01-25T00:21:10.643580+00:00 heroku[web.1]: State changed from up to crashed
+2021-01-25T00:21:10.646993+00:00 heroku[web.1]: State changed from crashed to starting
+2021-01-25T00:21:12.934897+00:00 heroku[web.1]: Starting process with command `npm start`
+2021-01-25T00:21:15.998632+00:00 app[web.1]: 
+2021-01-25T00:21:15.998659+00:00 app[web.1]: > mvc_design@1.0.0 start /app
+2021-01-25T00:21:15.998660+00:00 app[web.1]: > node server.js
+2021-01-25T00:21:15.998660+00:00 app[web.1]: 
+2021-01-25T00:21:16.258525+00:00 app[web.1]: Server listening on: http://localhost:55582
+2021-01-25T00:21:16.261610+00:00 app[web.1]: error connecting: Error: connect ECONNREFUSED 127.0.0.1:3306
+2021-01-25T00:21:16.261611+00:00 app[web.1]: at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16)
+2021-01-25T00:21:16.261611+00:00 app[web.1]: --------------------
+2021-01-25T00:21:16.261612+00:00 app[web.1]: at Protocol._enqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+2021-01-25T00:21:16.261612+00:00 app[web.1]: at Protocol.handshake (/app/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+2021-01-25T00:21:16.261613+00:00 app[web.1]: at Connection.connect (/app/node_modules/mysql/lib/Connection.js:116:18)
+2021-01-25T00:21:16.261613+00:00 app[web.1]: at Object.<anonymous> (/app/config/connection.js:14:12)
+2021-01-25T00:21:16.261613+00:00 app[web.1]: at Module._compile (internal/modules/cjs/loader.js:999:30)
+2021-01-25T00:21:16.261614+00:00 app[web.1]: at Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)
+2021-01-25T00:21:16.261614+00:00 app[web.1]: at Module.load (internal/modules/cjs/loader.js:863:32)
+2021-01-25T00:21:16.261614+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:708:14)
+2021-01-25T00:21:16.261615+00:00 app[web.1]: at Module.require (internal/modules/cjs/loader.js:887:19)
+2021-01-25T00:21:16.261615+00:00 app[web.1]: at require (internal/modules/cjs/helpers.js:74:18)
+2021-01-25T00:21:16.654998+00:00 heroku[web.1]: State changed from starting to up
+2021-01-25T00:21:18.939430+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=burger-2021.herokuapp.com request_id=5b0018f8-3b73-4688-b664-9d0f3e8d9d3d fwd="73.202.240.39" dyno=web.1 connect=5000ms service=15ms status=404 bytes=394 protocol=https
+2021-01-25T00:24:43.900616+00:00 app[web.1]: /app/config/orm.js:44
+2021-01-25T00:24:43.900653+00:00 app[web.1]: throw err;
+2021-01-25T00:24:43.900654+00:00 app[web.1]: ^
+2021-01-25T00:24:43.900655+00:00 app[web.1]: 
+2021-01-25T00:24:43.900655+00:00 app[web.1]: Error: Cannot enqueue Query after fatal error.
+2021-01-25T00:24:43.900657+00:00 app[web.1]: at Protocol._validateEnqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:212:16)
+2021-01-25T00:24:43.900657+00:00 app[web.1]: at Protocol._enqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:138:13)
+2021-01-25T00:24:43.900658+00:00 app[web.1]: at Connection.query (/app/node_modules/mysql/lib/Connection.js:198:25)
+2021-01-25T00:24:43.900658+00:00 app[web.1]: at Object.all (/app/config/orm.js:42:16)
+2021-01-25T00:24:43.900659+00:00 app[web.1]: at Object.all (/app/models/burger.js:6:9)
+2021-01-25T00:24:43.900659+00:00 app[web.1]: at /app/controllers/burgersController.js:10:10
+2021-01-25T00:24:43.900660+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2021-01-25T00:24:43.900660+00:00 app[web.1]: at next (/app/node_modules/express/lib/router/route.js:137:13)
+2021-01-25T00:24:43.900661+00:00 app[web.1]: at Route.dispatch (/app/node_modules/express/lib/router/route.js:112:3)
+2021-01-25T00:24:43.900661+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5) {
+2021-01-25T00:24:43.900662+00:00 app[web.1]: code: 'PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR',
+2021-01-25T00:24:43.900662+00:00 app[web.1]: fatal: false
+2021-01-25T00:24:43.900662+00:00 app[web.1]: }
+2021-01-25T00:24:43.906156+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=GET path="/" host=burger-2021.herokuapp.com request_id=02a285bc-7b6c-4888-8d19-5852f7b5207a fwd="73.202.240.39" dyno=web.1 connect=1ms service=11ms status=503 bytes=0 protocol=https
+2021-01-25T00:24:43.911703+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2021-01-25T00:24:43.911914+00:00 app[web.1]: npm ERR! errno 1
+2021-01-25T00:24:43.917026+00:00 app[web.1]: npm ERR! mvc_design@1.0.0 start: `node server.js`
+2021-01-25T00:24:43.917132+00:00 app[web.1]: npm ERR! Exit status 1
+2021-01-25T00:24:43.917253+00:00 app[web.1]: npm ERR!
+2021-01-25T00:24:43.917336+00:00 app[web.1]: npm ERR! Failed at the mvc_design@1.0.0 start script.
+2021-01-25T00:24:43.917408+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2021-01-25T00:24:43.925088+00:00 app[web.1]: 
+2021-01-25T00:24:43.925250+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2021-01-25T00:24:43.925311+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2021-01-25T00_24_43_918Z-debug.log
+2021-01-25T00:24:43.971035+00:00 heroku[web.1]: Process exited with status 1
+2021-01-25T00:24:44.001647+00:00 heroku[web.1]: State changed from up to crashed
+2021-01-25T00:31:16.354110+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=burger-2021.herokuapp.com request_id=796064cc-6d4a-4918-8c6a-2d741f7be77a fwd="73.202.240.39" dyno= connect= service= status=503 bytes= protocol=https
